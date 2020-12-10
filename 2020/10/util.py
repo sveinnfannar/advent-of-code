@@ -20,6 +20,5 @@ class Memoize:
             self.m[args] = self.f(*args)
         return self.m[args]
 
-
 if __name__ == "__main__":
     doctest.testmod()
