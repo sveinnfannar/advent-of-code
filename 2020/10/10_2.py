@@ -16,11 +16,9 @@ xs = [0] + xs + [device]
 def chains(target, curr = 0):
     if curr == target:
         return 1
-
     avail = list(filter(lambda x: 0 < x - curr <= 3, xs))
     if len(avail) == 0:
         return 0
-
     return sum([chains(target, x) for x in avail])
 
 
